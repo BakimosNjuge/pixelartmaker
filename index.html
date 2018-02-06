@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Pixel Art Maker | Google Developer Challenge Scholarship</title>
+
+<!--Defining the Metadata -->
+<meta charset="utf-8">
+<meta name="author" content="Leonard Muia">
+<meta name="description"  content="Google Developer Challenge Scholarship by Udacity 2017-2018 Final Project">
+<meta name="keywords" content="Udacity, Google Developer Scholarship 2017-2018, Project Art Maker">
+<meta name="viewport" content="width=1024px"> 
+
+
+<!--Linking External CSS Style files -->
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<link href="style/animate.css" rel="stylesheet" type="text/css">
+
+
+<!--Linking Javascript files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Internal CSS Styling -->
+<style type="text/css">
+
+</style>
+</head>
+<body id="wsite-body">
+<div id="wsite-main">
+	<div class="wsite-wrapper">
+		 <header class="wsite-nav-top gradient-1 shadow1">
+          <!-- Inserting Udacity Logo With text -->
+          <div class="wsite-logo animated bounceIn twice clear-fix:after">
+          	<a href="#"><img src="http://bit.ly/2E1TXrH" alt="Udacity Logo"></a>
+          </div>
+
+          <ul class="wsite-list-structure">
+          	<li class="wsite-block-1">
+
+            <!-- Creating a Floating Box with Instructions-->
+        
+          <div class="instructions-box shadow animated jackInTheBox">
+          	  <div class="instructions">
+          	     <h2>Instructions</h2><br/>
+          	   <ul class="wsite-list">
+          	   	<li>Select the size of the Grid by changing the values in the option fields.</li><br/>
+          	   	<div class="wsite-note-box">
+          	   		<p>Expect the canvas to change size depending on the values you input.</p>
+          	   	</div><br/>
+          	   	<li>Then Pick the color you'd want to paint with. Click on the color picker to select the color.</li><br/>
+          	   	<li>Left click your mouse and press, then drag to paint over the canvas. The color you selected will be painted on the canvas.</li><br/>
+          	   		<div class="wsite-note-box">
+          	   		<p>You can erase the color in a cell by right clicking on your mouse. Use the reset button to clear input values.</p>
+          	   	</div>
+          	   </li>
+          	  </div>
+          </div>
+         
+            </li>
+
+             <li class="wsite-block-2">
+         
+          <!-- Creating the Title of the Project-->
+
+          <div class="wsite-header-title animated bounceInRight">
+           <h1>Pixel Art Maker Project 3</h1>
+          </div>
+          <div class="wsite-header-title">
+          	<h3>
+          	<div class="typewrite" data-period="2000" data-type='[ "Udacity Google Developer Challenge Scholarship 2017/2018", "Final Project of Part 1, Pixel Art Maker","You can find the files of this Project on my GitHub", "Design & Development by Leonard Muia"]'></h3>
+          		<span class="wrap"></span>
+          	</div>
+          </div>
+             </li>
+          </ul>
+         </header>
+
+        <!-- Creating the Main Content of the Web App-->
+          <content id="wsite-content">
+
+          	      <h2 class="heading gradient-text bottom-margin-clear">Paint the grids with your favorite color</h2>
+
+          	<div class="wsite-content-inner">
+             <!-- Grid Size Form Input-->
+
+             <form id="sizePicker" class="wsite-select shadow1 animated zoomIn">
+             	<p>Grid Height: <input id="input_height" type="number" name="height" min="1" max="50" maxlength= "2" value="20" oninput="maxLengthCheck(this)"onkeypress="return submitKeyPress(event) , isNumeric (evt)"></p>
+             	<div class="space"></div>
+                <p>Grid Width : <input id="input_width" type="number" name="width" min="1" max="50" maxlength= "2" value="20" oninput="maxLengthCheck(this)" onkeypress="return submitKeyPress(event), isNumeric (evt)"></p>
+             </form>
+          </div>
+             <!-- Color Picker Input-->
+             
+             <div class="wsite-content-inner">
+             <div class="color-picker shadow1 animated zoomIn">
+             <h3 class="bottom-margin-clear">Pick a color</h3> 
+             <input type="color" id="colorPicker" value="#00b5ea">
+             </div>
+             </div>
+
+             <!-- Buttons -->
+
+           <div class="wsite-buttons bottom-margin-clear">
+
+              <button id="submit" class="wsite-submit shadow1 animated shake twice">Draw Canvas</button>
+              <button id="clear" class="wsite-reset shadow1">Clean the Canvas</button>
+
+           </div>
+
+            <!-- Design Canvas Table -->
+           <h2 class="wsite-canvas-title bottom-margin-clear">Design Canvas Grids</h2>
+
+           <div class="canvas shadow animated bounceInRight">
+             <table id="pixel_canvas"></table>
+           </div>
+
+          </content>
+
+
+         
+        <!-- Creating the website footer-->
+            
+          	</div>
+          <div class="clear-fix"></div>
+         <footer class="gradient-1 shadow">
+         <div>
+         	<h5 class="socialize">Let's Connect and Share Ideas</h5>
+
+         	<div class="space"></div>
+
+         	<ul class="social-links">
+            <li class="github"><a href="#" target="blank">Github |</a></li>
+            <li class="linkedin"><a href="#" target="blank">Linkedin |</a></li>
+            <li class="behance"><a href="#" target="blank">Behance</a></li>
+          </ul>
+
+         </div>
+
+
+         </footer>
+
+	</div>
+</div>
+
+<!-- Attaching External Javascript Files -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/typewrite.js"></script>
+
+</body>
+</html>
