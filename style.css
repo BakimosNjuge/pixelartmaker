@@ -1,0 +1,462 @@
+/*
+*This is my main style css file.
+*Design By Leonard Muia.
+*Google Developer Challenge Scholarship 2017-2018
+*Final Project of Part 1
+*/
+
+
+/******************************************************************************/
+/*	Inserting  Google Fonts												       */
+/******************************************************************************/
+
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lora:400i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+
+/******************************************************************************/
+/*	Reset styles												       */
+/******************************************************************************/
+
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed, 
+figure,figcaption,footer,header,hgroup, 
+menu,nav,output,section,summary,
+time,mark,audio,video 
+{
+	border:0px;
+    margin:0px;
+    padding:0px;
+	font-size:100%;
+    vertical-align:baseline;
+}
+
+p{
+	font-family: Raleway, 'Open Sans', sans-serif;
+}
+
+/******************************************************************************/
+/*	Main Body Styling												       */
+/******************************************************************************/
+
+
+#wsite-body{
+     background-color: #2c3c49;
+     visibility: visible;
+     max-width: 100%;
+     max-height: 100%;
+}
+#wsite-main {
+	position: flex;
+	visibility: visible;
+}
+.wsite-wrapper{
+    max-width: 100%;
+}
+
+/******************************************************************************/
+/*	Header Styling											       */
+/******************************************************************************/
+
+.wsite-nav-top{
+	width: 100%;
+	height: 500px;
+	overflow: visible;
+	display: inline-block;
+	position: relative;
+	/* background-image: url(http://systematixnote.com/wp-content/uploads/2018/02/background.png);
+	background-repeat: no-repeat; */
+}
+.wsite-logo{
+	text-align: right;
+	margin-left: 80%;
+	max-width: auto;
+	padding: 20px;
+	position: absolute;
+}
+.gradient-1{
+background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #43cea2, #185a9d);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #43cea2, #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.clear-fix{
+	height:0;
+	clear:both;
+	font-size:0;
+	min-height:0;
+	display:block;
+	visibility:hidden;
+}
+
+.wsite-list-structure{
+	list-style-type: none;
+	display: inline-block;
+	width: 100%;
+}
+.wsite-block-1{
+	position: fixed;
+	width: 35%;
+	display:inline-block;
+	z-index: 2;
+}
+
+.wsite-block-2{
+	position: relative;
+	margin-left: 200px;
+	text-align: center;
+	margin-top: 150px;
+    width: 75%;
+}
+
+/******************************************************************************/
+/*	Instructions box Styling											       */
+/******************************************************************************/
+
+
+.instructions-box{
+	background-color: #2c3c49;
+    margin-top: 30px;
+    margin-left: 50px;
+    border-radius: 5px;
+    height: auto;
+    overflow: hidden;
+    padding: 40px;
+    z-index: 1;
+}
+
+.instructions h2{
+     font-size: 24px;
+     text-align: left;
+     color: #fff;
+     font-weight: 400;
+     text-transform: capitalize;
+     padding: 5px;
+}
+.wsite-list{
+      font-family: Roboto Slab, 'Open Sans', sans serif;
+      font-size: 16px;
+      padding: 10px;
+      text-align: left;
+      color: #fff;
+      line-height: 1.5;
+      font-weight: 300;
+}
+.wsite-note-box{
+	   padding: 10px;
+	   font-size: 16px;
+	   border-radius: 2px;
+	   background: #ade4f9;
+	   color: #2c3c49;
+}
+
+.shadow{
+     -webkit-box-shadow: 0 4px 10px 0 #081F44, 0 6px 20px 0 #081F44; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow:    0 4px 10px 0 #081F44, 0 6px 20px 0 #081F44; /* Firefox 3.5 - 3.6 */
+      box-shadow:        0 4px 10px 0 #081F44, 0 6px 20px 0 #081F44; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.shadow1{
+     -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow:    0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Firefox 3.5 - 3.6 */
+      box-shadow:         0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+
+/******************************************************************************/
+/*	Project Title Styling											       */
+/******************************************************************************/
+
+
+.wsite-header-title{
+      position: relative;
+      margin-left: 40%;
+      color: #fff;
+      z-index: 1;
+      margin-bottom: 10px;
+}
+
+h1{
+      font-family: Merriweather, 'Open Sans', sans-serif;
+      color: #fff;
+      font-size: 70px;
+      font-weight: 700;
+      /* text-shadow: 0px 4px 3px #081F44,
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1); */
+}
+h3{
+      font-family: Merriweather, 'Open Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 100;    
+}
+.bottom-margin-clear{
+      margin-bottom: 30px;
+}
+
+/******************************************************************************/
+/*	Website Main Content Styling											       */
+/******************************************************************************/
+
+#wsite-content{
+	margin-right: 100px;
+	max-width: 75%;
+	float: right;
+	text-align: center;
+	display:inline-block;
+	position: relative;
+	z-index: 1;
+}
+.heading{
+	font-size: 40px;
+	margin-top: 50px;
+	text-align: center;
+	padding: 10px;
+	font-weight: 100;
+	font-family: Raleway, 'Open Sans', sans-serif;
+}
+.space{
+	height: 20px;
+}
+
+/******************************************************************************/
+/*	Input Form Styling											       */
+/******************************************************************************/
+
+.wsite-content-inner{
+	font-family: Roboto Slab, 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	font-weight: 300;
+	display: inline-block;
+	margin: 20px;
+}
+.wsite-content-inner input{
+    font-family: Roboto Slab, 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    background: #394959 ;
+    color: #e6f7fe;
+    border-radius: 4px;
+    border: 1px solid #2c3c49;
+}
+.wsite-content-inner input:hover{
+    background: #e6f7fe ;
+    color: #2c3c49;
+}
+.wsite-content-inner input:active{
+    background: #e6f7fe ;
+    color: #2c3c49;
+    border:1px solid #3184ed;
+}
+.wsite-select{
+	padding: 50px;
+	text-align: left;
+	width: 200px;
+	height: auto;
+	background: #2c3c49;
+}
+.gradient-text{
+	color: #B2FEFA;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/******************************************************************************/
+/*	Color Picker											       */
+/******************************************************************************/
+.color-picker{
+	padding: 50px;
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	background: #2c3c49;
+}
+
+.color-picker input{
+    border:2px solid #fff;
+    padding: 5px;
+}
+
+/******************************************************************************/
+/*	Buttons Styling											       */
+/******************************************************************************/
+.wsite-buttons{
+	display: block;
+	position: relative;
+	text-align: center;
+}
+.wsite-submit{
+    font-family: Roboto Slab, 'Open Sans', sans-serif;
+    margin: 15px;
+    font-size: 20px;
+	padding: 15px 50px 15px 50px;
+	border: none;
+	color: #fff;
+	background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #56CCF2, #2F80ED);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #56CCF2, #2F80ED); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.wsite-reset{
+    font-family: Roboto Slab, 'Open Sans', sans-serif;
+    margin: 15px;
+    font-size: 20px;
+	padding: 15px 50px 15px 50px;
+	border: none;
+	color: #333;
+	background: #edf9ff;
+}
+
+/******************************************************************************/
+/*	Canvas Table Styling											       */
+/******************************************************************************/
+.canvas{
+	background: #fff;
+	margin-left: 50px;
+	height: auto;
+	overflow: scroll;
+	padding:50px;
+}
+.wsite-canvas-title{
+    font-family: Merriweather, 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+/******************************************************************************/
+/*	Table Styling											       */
+/******************************************************************************/
+
+table,
+tr,
+td {
+    border: 1px solid #333333;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #f7f7f7;
+    border-radius: 5px;
+    position: relative;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+
+/******************************************************************************/
+/*	Footer Links											       */
+/******************************************************************************/
+
+footer{
+	position: relative;
+	text-align: right;
+	margin-top: 100px;
+	padding: 40px;
+	max-width: 100%;
+	z-index: -1;
+}
+.socialize{
+	font-family: Merriweather, 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+}
+.social-links{
+	list-style-type: none;
+	color: #e6f7fe;
+	font-family: Raleway, 'Open Sans', sans-serif;
+	font-size: 15px;
+}
+.social-links li a{
+    text-decoration: none;
+    color: #e6f7fe;
+}
+.social-links li a:hover{
+    text-decoration: none;
+    color: #ff4858;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #ee0989, #ff4858);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #ee0989, #ff4858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.github{
+	display: inline;
+}
+.linkedin{
+	display: inline;
+}
+.behance{
+	display: inline;
+}
+
+
+/******************************************************************************/
+/*	Responsive Disabled											       */
+/******************************************************************************/
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  #wsite-body{max-width: 100%;}
+  .wsite-block-1 { width: 35%; }
+  .wsite-block-2{ width: 75%; }
+  .wsite-content{ max-width: 75%; }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 1024px) {
+  #wsite-body{max-width: 100%;}
+  .wsite-block-1 {display: none; visibility: hidden;}
+  .wsite-block-2 {display: none; visibility: hidden;}
+  .wsite-logo    {display: none; visibility: hidden;}
+  .wsite-content{ max-width: 75%; }
+  .wsite-nav-top {height: 50px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
