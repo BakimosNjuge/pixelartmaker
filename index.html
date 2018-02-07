@@ -28,27 +28,28 @@
 	<div class="wsite-wrapper">
 		 <header class="wsite-nav-top gradient-1 shadow1">
           <!-- Inserting Udacity Logo With text -->
-          <div class="wsite-logo animated bounceIn twice clear-fix:after">
+          <div class="wsite-logo animated bounceIn twice">
           	<a href="#"><img src="http://bit.ly/2E1TXrH" alt="Udacity Logo"></a>
           </div>
 
           <ul class="wsite-list-structure">
-          	<li class="wsite-block-1">
+          	<li class="wsite-block-1 bottom-margin-clear">
 
             <!-- Creating a Floating Box with Instructions-->
         
-          <div class="instructions-box shadow animated jackInTheBox">
+          <div id="instructions-box" class="instructions-box shadow animated jackInTheBox">
           	  <div class="instructions">
           	     <h2>Instructions</h2><br/>
           	   <ul class="wsite-list">
           	   	<li>Select the size of the Grid by changing the values in the option fields.</li><br/>
           	   	<div class="wsite-note-box">
-          	   		<p>Expect the canvas to change size depending on the values you input.</p>
-          	   	</div><br/>
+          	   		<p>The Size of the Grid Changes with Input Width and Height</p>
+                </div>
+                <br/>
           	   	<li>Then Pick the color you'd want to paint with. Click on the color picker to select the color.</li><br/>
           	   	<li>Left click your mouse and press, then drag to paint over the canvas. The color you selected will be painted on the canvas.</li><br/>
           	   		<div class="wsite-note-box">
-          	   		<p>You can erase the color in a cell by right clicking on your mouse. Use the reset button to clear input values.</p>
+          	   		<p>You can erase the color in a cell by right clicking on your mouse. Use the clear button to clean the canvas of paint color.</p>
           	   	</div>
           	   </li>
           	  </div>
@@ -60,8 +61,8 @@
          
           <!-- Creating the Title of the Project-->
 
-          <div class="wsite-header-title animated bounceInRight">
-           <h1>Pixel Art Maker Project 3</h1>
+          <div class="wsite-header-title animated zoomIn">
+           <h1>Pixel Art Maker Project</h1>
           </div>
           <div class="wsite-header-title">
           	<h3>
@@ -96,25 +97,32 @@
              </div>
              </div>
 
+               <div class="wsite-content-inner">
+               
+               <div class="note shadow1">
+              <p>Please Note that the Maximum Input for the Grid Width and Height is 50. This limits the display of the Canvas to make it Presentable</p>
+                   </div>
+              
+              </div>
+
              <!-- Buttons -->
 
            <div class="wsite-buttons bottom-margin-clear">
 
-              <button id="submit" class="wsite-submit shadow1 animated shake twice">Draw Canvas</button>
-              <button id="clear" class="wsite-reset shadow1">Clean the Canvas</button>
+              <button id="submit" class="wsite-submit shadow1 animated tada twice">Draw Canvas</button>
+              <button id="clear" class="wsite-reset shadow1 animated zoomIn">Clear Canvas</button>
+              <button id="download" class="wsite-download shadow1 animated zoomIn">Download</button>
 
            </div>
 
             <!-- Design Canvas Table -->
            <h2 class="wsite-canvas-title bottom-margin-clear">Design Canvas Grids</h2>
 
-           <div class="canvas shadow animated bounceInRight">
-             <table id="pixel_canvas"></table>
+           <div class="canvas shadow animated bounceInUp bottom-margin-clear">
+             <table id="pixel_canvas" class="shadow1"></table>
            </div>
 
           </content>
-
-
          
         <!-- Creating the website footer-->
             
