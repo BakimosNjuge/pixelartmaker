@@ -5,15 +5,15 @@
 //Below is the javaScript Code for creating the canvas
 
 
-
 function makeGrid(){
-// Declaring Constants in a function
+
+// Declaring Constants with local Scope
 
 const height = $("#input_height").val(); // determines the table height(rows)
 const width = $("#input_width").val(); // determines the table width(columns)
 const table  = $("#pixel_canvas"); // determines the table canvas
 
-// Empty Previous Table Input
+// Empty Previous Table Input Upon Clicking the Draw Button
 
  table.children().remove();
 
@@ -27,28 +27,36 @@ for (let i = 0; i < height; i++) //function loops by adding new table rows(heigh
         table.children().last().append("<td></td>");
       }
     }
+
 }
 
-// Creating an Event that Calls the Function onClick. This creates the canvas grid
+// Creating an Event that Calls the Function makeGrid() onClick event, which occurs at the button submit. This creates the canvas grid
 
 $("button#submit").click(function(event) {
   event.preventDefault();
   makeGrid();
 
 
+  // Creating an Event that Resets the Painting Upon Clicking Clear Button. Simplified, right! Lol
+
+$("button#clear").click(function(clearCanvas){
+    event.preventDefault();
+   clearCanvas = $("td").css("background-color","#f7f7f7");
+  });
 
 
-//Using Left Click Mouse Button for Color Painting Canvas
+//Using Left Click Mouse Button for Color Painting Canvas. This combines two events, i.e click followed by mouseover to produce the dragging effect
 
-  $("td").click(function(pickColor) {
-    switch (pickColor.which) {
+   $("td").on('click mouseover',function(pickColor) {
+    switch (pickColor.which){
       case 1:
         $(this).css("background-color",
          document.getElementById("colorPicker").value);
         
-        //No need to use to break; it's irrelevant in this particular case
+        //No need to use to break; it's irrelevant in this particular situation coz there is only once case
     }
   });
+
 
 
 //Using Right Click Button to Erase Color by restoring color to white
@@ -57,12 +65,10 @@ $("td").contextmenu(function(event) {
     event.preventDefault()
     $(this).css("background-color", "#f7f7f7")
   });
-
-
 });
 
 
-// Event Listener that triggers submit input values upon clicking Keyboard Enter Key
+// Event Listener that triggers submit input values upon clicking Keyboard Enter Key. Note the key code for enter button on keyboard is 13
 
 function submitKeyPress(e)
 {
@@ -74,14 +80,15 @@ function submitKeyPress(e)
     return true;
 }
 
-// Limiting Input Field Values Entered
+// Limiting Input Fields Characters Entered. I could have used max-length attribute in html, but it doesn't limit input and clicking, enter. Am working on a different way to enhance UX
 
-  function maxLengthCheck(object) {
+function maxLengthCheck(object) {
     if (object.value.length > object.maxLength)
-      object.value = object.value.slice(0, object.maxLength)
-  }
+      object.value = object.value.slice(0, object.maxLength) // The input characters are sliced after the maximum number of characters in the input field is reached
+  };
     
-  function isNumeric (evt) {
+  
+function isNumeric (evt) {    // This code determines the Charaters to be used in the Input. Not just 
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
     key = String.fromCharCode (key);
@@ -91,6 +98,22 @@ function submitKeyPress(e)
       if(theEvent.preventDefault) theEvent.preventDefault();
     }
   }
+ 
+
+// Downloading the Canvas Artwork as a png file
+
+var canvas= document.getElementById('pixel_canvas'), 
+ctx = canvas.getContext('2d');
+
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+$('#download').click(function() {
+    event.preventDefault();
+    downloadCanvas(this, 'pixel_canvas', 'pixel-art.png');
+}, false);
 
 
 // Creation of Typewriting Effect
